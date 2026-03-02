@@ -1,0 +1,135 @@
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    background: #fff;
+    position: sticky;
+    top:0;
+    z-index:10;
+}
+
+.nav-left .menu-icon {
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-left .logo {
+    width: 130px;
+}
+
+.nav-middle .search-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius:25px;
+}
+
+.nav-middle .search-box input{
+    width: 400px;
+    border:0;
+    outline:0;
+    background: transparent;
+}
+
+.nav-middle .search-box image {
+    width: 15px;
+}
+
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .user-icon{
+    width: 35px;
+    border-radius: 50%;
+}
+
+
+/* ---------- RESPONSIVE NAVBAR ---------- */
+
+/* Large screens (default styles already set) */
+
+@media (max-width: 992px) {
+  .nav-middle .search-box input {
+    width: 250px;
+  }
+
+  .nav-right img {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-middle .search-box input {
+    width: 180px;
+  }
+
+  nav {
+    padding: 10px 10px;
+  }
+
+  .nav-right img {
+    width: 22px;
+    margin-right: 12px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  /* Stack layout slightly */
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 10px;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .nav-middle {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-middle .search-box {
+    width: 90%;
+  }
+
+  .nav-middle .search-box input {
+    width: 100%;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-right img {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  /* Hide some icons for ultra small screens */
+  .nav-right img:nth-child(1),  /* upload */
+  .nav-right img:nth-child(2) { /* more */
+    display: none;
+  }
+
+  .nav-middle .search-box {
+    padding: 6px 10px;
+  }
+
+  .nav-middle .search-box input {
+    width: 100%;
+    font-size: 14px;
+  }
+}
