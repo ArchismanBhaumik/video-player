@@ -32,7 +32,7 @@ const Recommended = ({ categoryId }) => {
           </div>
           </Link>
         );
-      })}
+      })} 
     </div>
   );
 };
