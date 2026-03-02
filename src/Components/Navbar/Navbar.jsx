@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 import menu_icon from "../../assets/menu.png";
@@ -8,14 +8,17 @@ import more_icon from "../../assets/more.png";
 import notification_icon from "../../assets/notification.png";
 import profile_icon from "../../assets/jack.png";
 import upload_icon from "../../assets/upload.png";
+import { useDebounce } from "../../hooks";
 
-const Navbar = ({setSidebar}) => {
+const Navbar = ({setSidebar,search,setSearch}) => {
   const navigate = useNavigate();
-
   function setSideBarStatus(){
     setSidebar((prev)=>!prev)
   }
-
+  const setSearchValue=(value)=>{
+    console.log('Searching for:',value);
+    setSearch(value);
+  }
   return (
     <nav className="flex-div">
       <div className="nav-left flex-div">
@@ -24,7 +27,7 @@ const Navbar = ({setSidebar}) => {
       </div>
       <div className="nav-middle flex-div">
         <div className="search-box flex-div">
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" value={search} onChange={(e)=>setSearchValue(e.target.value)}/>
           <img className="search" src={search_icon} alt="" />
         </div>
       </div>
