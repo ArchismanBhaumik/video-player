@@ -13,7 +13,7 @@ import simon from '../../assets/simon.png'
 import tom from '../../assets/tom.png'
 import megan from '../../assets/megan.png'
 import cameron from '../../assets/cameron.png'
-import './Sidebar.css';
+import './SideBar.css';
 const Sidebar = ({sidebar,category,setCategory}) => {
   return (
     <div className={`side-bar ${sidebar?"":"small-sidebar"}`}>
