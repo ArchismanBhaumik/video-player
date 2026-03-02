@@ -15,7 +15,6 @@ import megan from '../../assets/megan.png'
 import cameron from '../../assets/cameron.png'
 import './Sidebar.css';
 const Sidebar = ({sidebar,category,setCategory}) => {
-console.log(sidebar);
   return (
     <div className={`side-bar ${sidebar?"":"small-sidebar"}`}>
         <div className="short-cut-links">
